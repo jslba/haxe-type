@@ -1,7 +1,7 @@
 {
 	"name": "haxe-type",
-	"version": "0.0.1",
-	"description": "MOI (My Own Implementation) of some Haxe Type.",
+	"version": "0.0.2",
+	"description": "My Own Implementation of some Haxe Type.",
 	"main": "source/index.js",
 	"repository": {
 		"type": "git",
