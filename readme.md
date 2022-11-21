@@ -1,21 +1,12 @@
 > **Note**   
 > All or part of the types presented here can be a partial implementation of the
 > implemented type.
-
 # Types :
 ## [hxt.List][list] extends [Array][array] implement of [haxe.ds.List][hxlist]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
-<h2><a href="/source/type/bytes.js">hxt.Bytes</a> extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://api.haxe.org/haxe/io/Bytes.html">haxe.io.Bytes</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.Bytes][bytes] extends [Uint8Array][uint8array] implement of [haxe.io.Bytes][hxbytes]
 ```haxe
 /* no custom constructor or variables. */
 ```
@@ -25,23 +16,14 @@
 static ofString(s: String): Bytes
 ```
 ```haxe
-/* getString : Returns the `length`-bytes long string stored at the given
-   position `start`. */
+/* getString : Returns the `length`-bytes long string stored at the given position `start`. */
 getString(start:Int, length:Int): String
 ```
 ```haxe
 /* toString : Returns a `String` representation of the bytes */
 toString(): String
 ```
-<h2><a href="/source/type/map/int.js">hxt.IntMap</a> extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://api.haxe.org/haxe/ds/IntMap.html">haxe.ds.IntMap</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.IntMap][intmap] extends [Object][object] implement of [haxe.ds.IntMap][hxintmap]
 ```haxe
 /* no custom variables or methods. */
 ```
@@ -50,47 +32,23 @@ toString(): String
 var foo = new hxt.IntMap({1: "Foo", 2: "Bar"});
 foo[3] = "Baz";
 ```
-<h2><a href="/source/type/map/string.js">hxt.StringMap</a> extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://api.haxe.org/haxe/ds/StringMap.html">haxe.ds.StringMap</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.StringMap][stringmap] extends [Object][object] implement of [haxe.ds.StringMap][hxstringmap]
 ```haxe
 /* no custom variables or methods. */
 ```
 ### **Custom constructor**
 ```js
-var foo = new hxt.IntMap({"foo": "Bar", "Baz": "Qux"});
+var foo = new hxt.StringMap({"foo": "Bar", "Baz": "Qux"});
 foo.quux = "corge";
 ```
-<h2><a href="/source/type/map/object.js">hxt.ObjectMap</a> extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://api.haxe.org/haxe/ds/ObjectMap.html">haxe.ds.ObjectMap</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.ObjectMap][objectmap] extends [Array][array] implement of [haxe.ds.ObjectMap][hxobjectmap]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
 # Experimental types :
-<h2><a href="/source/type/enum.js">hxt.Enum</a> extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://haxe.org/manual/types-enum-instance.html">enum</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.Enum][enum] extends [Array][array] implement of [Enum][hxenum]
 ```js
-class Foo extends Enum {
+class Foo extends hxt.Enum {
 	static __construct__ = ['Bar', 'Baz'];
 	static Bar = new this('Bar', 0);
 	static Baz(args) {
@@ -100,7 +58,7 @@ class Foo extends Enum {
 Foo.resolve();
 
 // or : 
-class Foo extends Enum {
+class Foo extends hxt.Enum {
 	static get __construct__() {
 		return ['Bar', 'Baz'];
 	}
@@ -116,22 +74,30 @@ Foo.resolve();
 Foo.Bar;       // <Foo> ['Enum1', 0]
 Foo.Baz(true); // <Foo> ['Baz', 1, true]
 ```
-<h2><a href="/source/type/class.js">hxt.Class</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://haxe.org/manual/types-enum-instance.html">enum</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.Class][class] implement of [Class][hxclass]
 ```js
-class MyClass extends Class {
+class MyClass extends hxt.Class {
    // some stuff here
 }
 MyClass.resolve();
 ```
 
 [list]: /source/type/list.js
-[hxlist]: https://api.haxe.org/haxe/ds/List.html
+[bytes]: /source/type/bytes.js
+[intmap]: /source/type/map/int.js
+[stringmap]: /source/type/map/string.js
+[objectmap]: /source/type/map/object.js
+[enum]: /source/type/enum.js
+[class]: /source/type/class.js
+
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+[object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+[uint8array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
+
+[hxlist]: https://api.haxe.org/haxe/ds/List.html
+[hxbytes]: https://api.haxe.org/haxe/io/Bytes.html
+[hxintmap]: https://api.haxe.org/haxe/ds/IntMap.html
+[hxstringmap]: https://api.haxe.org/haxe/ds/StringMap.html
+[hxobjectmap]: https://api.haxe.org/haxe/ds/ObjectMap.html
+[hxenum]: https://haxe.org/manual/types-enum-instance.html
+[hxclass]: https://haxe.org/manual/types-class-instance.html
