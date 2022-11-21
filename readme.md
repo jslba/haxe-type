@@ -2,11 +2,11 @@
 > All or part of the types presented here can be a partial implementation of the
 > implemented type.
 # Types :
-## [hxt.List][01] extends [08][08] implement of [haxe.ds.List][11]
+## [hxt.List][01] extends [Array][08] implement of [haxe.ds.List][11]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
-## [hxt.Bytes][02] extends [10][10] implement of [haxe.io.Bytes][12]
+## [hxt.Bytes][02] extends [Uint8Array][10] implement of [haxe.io.Bytes][12]
 ```haxe
 /* no custom constructor or variables. */
 ```
@@ -24,7 +24,7 @@ getString(start:Int, length:Int): String
 /* toString : Returns a `String` representation of the bytes */
 toString(): String
 ```
-## [hxt.IntMap][03] extends [09][09] implement of [haxe.ds.IntMap][13]
+## [hxt.IntMap][03] extends [Object][09] implement of [haxe.ds.IntMap][13]
 ```haxe
 /* no custom variables or methods. */
 ```
@@ -33,7 +33,7 @@ toString(): String
 var foo = new hxt.IntMap({1: "Foo", 2: "Bar"});
 foo[3] = "Baz";
 ```
-## [hxt.StringMap][04] extends [09][09] implement of [haxe.ds.StringMap][14]
+## [hxt.StringMap][04] extends [Object][09] implement of [haxe.ds.StringMap][14]
 ```haxe
 /* no custom variables or methods. */
 ```
@@ -42,12 +42,12 @@ foo[3] = "Baz";
 var foo = new hxt.StringMap({"foo": "Bar", "Baz": "Qux"});
 foo.quux = "corge";
 ```
-## [hxt.ObjectMap][05] extends [08][08] implement of [haxe.ds.ObjectMap][15]
+## [hxt.ObjectMap][05] extends [Array][08] implement of [haxe.ds.ObjectMap][15]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
 # Experimental types :
-## [hxt.Enum][06] extends [08][08] implement of [06][16]
+## [hxt.Enum][06] extends [Array][08] implement of [Enum][16]
 ```js
 class Foo extends hxt.Enum {
 	static __construct__ = ['Bar', 'Baz'];
@@ -75,7 +75,7 @@ Foo.resolve();
 Foo.Bar;       // <Foo> ['Enum1', 0]
 Foo.Baz(true); // <Foo> ['Baz', 1, true]
 ```
-## [hxt.Class][07] implement of [07][17]
+## [hxt.Class][07] implement of [Class][17]
 ```js
 class MyClass extends hxt.Class {
    // some stuff here
