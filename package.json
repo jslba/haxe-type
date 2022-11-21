@@ -1,0 +1,19 @@
+{
+	"name": "@angelisium/haxe-type",
+	"version": "0.0.1",
+	"description": "MOI (My Own Implementation) of some Haxe Type.",
+	"main": "source/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jshlba/haxe-type.git"
+	},
+	"keywords": [
+		"haxe"
+	],
+	"author": "Angelisium",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jshlba/haxe-type/issues"
+	},
+	"homepage": "https://github.com/jshlba/haxe-type"
+}
