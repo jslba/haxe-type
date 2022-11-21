@@ -1,5 +1,5 @@
 {
-	"name": "@angelisium/haxe-type",
+	"name": "haxe-type",
 	"version": "0.0.1",
 	"description": "MOI (My Own Implementation) of some Haxe Type.",
 	"main": "source/index.js",
