@@ -3,15 +3,7 @@
 > implemented type.
 
 # Types :
-<h2><a href="/source/type/list.js">hxt.List</a> extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>
-	<small>
-		<small>
-			<small><abbr title="My own implementation">Moi</abbr> of </small>
-			<a href="https://api.haxe.org/haxe/ds/List.html">haxe.ds.List</a>
-		</small>
-	</small>
-</h2>
-
+## [hxt.List][list] extends [Array][array] implement of [haxe.ds.List][hxlist]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
@@ -139,3 +131,7 @@ class MyClass extends Class {
 }
 MyClass.resolve();
 ```
+
+[list]: /source/type/list.js
+[hxlist]: https://api.haxe.org/haxe/ds/List.html
+[array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
