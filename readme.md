@@ -2,11 +2,11 @@
 > All or part of the types presented here can be a partial implementation of the
 > implemented type.
 # Types :
-## [hxt.List][list] extends [Array][array] implement of [haxe.ds.List][hxlist]
+## [hxt.List][01] extends [08][08] implement of [haxe.ds.List][11]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
-## [hxt.Bytes][bytes] extends [Uint8Array][uint8array] implement of [haxe.io.Bytes][hxbytes]
+## [hxt.Bytes][02] extends [10][10] implement of [haxe.io.Bytes][12]
 ```haxe
 /* no custom constructor or variables. */
 ```
@@ -16,14 +16,15 @@
 static ofString(s: String): Bytes
 ```
 ```haxe
-/* getString : Returns the `length`-bytes long string stored at the given position `start`. */
+/* getString : Returns  the  `length`-bytes  long  string  stored  at  the given
+position `start`. */
 getString(start:Int, length:Int): String
 ```
 ```haxe
 /* toString : Returns a `String` representation of the bytes */
 toString(): String
 ```
-## [hxt.IntMap][intmap] extends [Object][object] implement of [haxe.ds.IntMap][hxintmap]
+## [hxt.IntMap][03] extends [09][09] implement of [haxe.ds.IntMap][13]
 ```haxe
 /* no custom variables or methods. */
 ```
@@ -32,7 +33,7 @@ toString(): String
 var foo = new hxt.IntMap({1: "Foo", 2: "Bar"});
 foo[3] = "Baz";
 ```
-## [hxt.StringMap][stringmap] extends [Object][object] implement of [haxe.ds.StringMap][hxstringmap]
+## [hxt.StringMap][04] extends [09][09] implement of [haxe.ds.StringMap][14]
 ```haxe
 /* no custom variables or methods. */
 ```
@@ -41,12 +42,12 @@ foo[3] = "Baz";
 var foo = new hxt.StringMap({"foo": "Bar", "Baz": "Qux"});
 foo.quux = "corge";
 ```
-## [hxt.ObjectMap][objectmap] extends [Array][array] implement of [haxe.ds.ObjectMap][hxobjectmap]
+## [hxt.ObjectMap][05] extends [08][08] implement of [haxe.ds.ObjectMap][15]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
 # Experimental types :
-## [hxt.Enum][enum] extends [Array][array] implement of [Enum][hxenum]
+## [hxt.Enum][06] extends [08][08] implement of [06][16]
 ```js
 class Foo extends hxt.Enum {
 	static __construct__ = ['Bar', 'Baz'];
@@ -74,7 +75,7 @@ Foo.resolve();
 Foo.Bar;       // <Foo> ['Enum1', 0]
 Foo.Baz(true); // <Foo> ['Baz', 1, true]
 ```
-## [hxt.Class][class] implement of [Class][hxclass]
+## [hxt.Class][07] implement of [07][17]
 ```js
 class MyClass extends hxt.Class {
    // some stuff here
@@ -82,22 +83,21 @@ class MyClass extends hxt.Class {
 MyClass.resolve();
 ```
 
-[list]: /source/type/list.js
-[bytes]: /source/type/bytes.js
-[intmap]: /source/type/map/int.js
-[stringmap]: /source/type/map/string.js
-[objectmap]: /source/type/map/object.js
-[enum]: /source/type/enum.js
-[class]: /source/type/class.js
+[01]: /source/type/list.js
+[02]: /source/type/bytes.js
+[03]: /source/type/map/int.js
+[04]: /source/type/map/string.js
+[05]: /source/type/map/object.js
+[06]: /source/type/enum.js
+[07]: /source/type/class.js
+[08]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+[09]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+[10]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 
-[array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-[object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-[uint8array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
-
-[hxlist]: https://api.haxe.org/haxe/ds/List.html
-[hxbytes]: https://api.haxe.org/haxe/io/Bytes.html
-[hxintmap]: https://api.haxe.org/haxe/ds/IntMap.html
-[hxstringmap]: https://api.haxe.org/haxe/ds/StringMap.html
-[hxobjectmap]: https://api.haxe.org/haxe/ds/ObjectMap.html
-[hxenum]: https://haxe.org/manual/types-enum-instance.html
-[hxclass]: https://haxe.org/manual/types-class-instance.html
+[11]: https://api.haxe.org/haxe/ds/List.html
+[12]: https://api.haxe.org/haxe/io/Bytes.html
+[13]: https://api.haxe.org/haxe/ds/IntMap.html
+[14]: https://api.haxe.org/haxe/ds/StringMap.html
+[15]: https://api.haxe.org/haxe/ds/ObjectMap.html
+[16]: https://haxe.org/manual/types-enum-instance.html
+[17]: https://haxe.org/manual/types-class-instance.html
