@@ -1,9 +1,12 @@
 class Class {
 	static resolve() {
-		if(!window.__class__) {
-			window.__class__ = {};
+		let g = {};
+		try { g = global } catch(e) {}
+		try { g = window } catch(e) {}
+		if(!g.__class__) {
+			g.__class__ = {};
 		}
-		window.__class__[this.name] = this;
+		g.__class__[this.name] = this;
 	}
 }
 
