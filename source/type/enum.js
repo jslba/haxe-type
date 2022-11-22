@@ -1,9 +1,12 @@
 class Enum extends Array {
 	static resolve() {
-		if(!window.__enum__) {
-			window.__enum__ = {};
+		let g = {};
+		try { g = global } catch(e) {}
+		try { g = window } catch(e) {}
+		if(!g.__enum__) {
+			g.__enum__ = {};
 		}
-		window.__enum__[this.name] = this;
+		g.__enum__[this.name] = this;
 	}
 	toString() {
 		return this[0];
