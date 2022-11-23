@@ -4,7 +4,9 @@ const Bytes = require('./type/bytes.js');
 const Class = require('./type/class.js');
 const IntMap = require('./type/map/int.js');
 const StringMap = require('./type/map/string.js');
-const ObjectMap = require('./type/map/object.js');
+/* bad implementation, an ObjectMap is like an Object except that the key is the
+   Object (yeah wtf) */
+// const ObjectMap = require('./type/map/object.js');
 
 module.exports = {
 	Enum,
@@ -12,6 +14,6 @@ module.exports = {
 	Bytes,
 	Class,
 	IntMap,
-	StringMap,
-	ObjectMap
+	StringMap
+	// ObjectMap
 };
