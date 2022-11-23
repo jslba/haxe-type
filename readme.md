@@ -42,11 +42,13 @@ foo[3] = "Baz";
 var foo = new hxt.StringMap({"foo": "Bar", "Baz": "Qux"});
 foo.quux = "corge";
 ```
+# Experimental types :
+<!--
 ## [hxt.ObjectMap][05] extends [Array][08] implement of [haxe.ds.ObjectMap][15]
 ```haxe
 /* no custom constructor, variables or methods. */
 ```
-# Experimental types :
+-->
 ## [hxt.Enum][06] extends [Array][08] implement of [Enum][16]
 ```js
 class Foo extends hxt.Enum {
