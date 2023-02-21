@@ -14,6 +14,6 @@ module.exports = {
 	Bytes,
 	Class,
 	IntMap,
-	StringMap
+	StringMap,
 	// ObjectMap
 };
