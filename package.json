@@ -15,5 +15,8 @@
 	"bugs": {
 		"url": "https://github.com/jslba/haxe-type/issues"
 	},
-	"homepage": "https://github.com/jslba/haxe-type"
+	"homepage": "https://github.com/jslba/haxe-type",
+	"devDependencies": {
+		"jest": "^29.4.3"
+	}
 }
