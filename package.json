@@ -1,6 +1,6 @@
 {
 	"name": "haxe-type",
-	"version": "0.0.4",
+	"version": "0.0.8",
 	"description": "An implementation of some Haxe Type.",
 	"main": "source/index.js",
 	"scripts": {
