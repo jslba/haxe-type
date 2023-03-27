@@ -1,7 +1,14 @@
 export class Enum extends Array {
+    constructor(arrayLength?: number);
+    constructor(arrayLength: number);
+    constructor(...items: any[]);
     static resolve(): void;
 }
-export class List extends Array {}
+export class List extends Array {
+    constructor(arrayLength?: number);
+    constructor(arrayLength: number);
+    constructor(...items: any[]);
+}
 export class Bytes extends Uint8Array {
     static alloc(): void;
     static ofString(s: string): Bytes;
